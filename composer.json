@@ -5,7 +5,13 @@
     "dist": {
         "url": "https://github.com/mastroiannim/slim3/archive/master.zip",
         "type": "zip"
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mastroiannim/slim3"
+        }
+    ],
     "license": "MIT",
     "type": "project",
     "keywords": ["slim-framework", "sqlite"],
