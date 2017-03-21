@@ -1,6 +1,11 @@
 {
     "name": "mastroiannim/slim3",
     "description": "Simple Slim Framework 3 in Sqlite.",
+    "version": "0.0.1",
+    "dist": {
+        "url": "https://github.com/mastroiannim/slim3/archive/master.zip",
+        "type": "zip"
+    }
     "license": "MIT",
     "type": "project",
     "keywords": ["slim-framework", "sqlite"],
