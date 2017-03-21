@@ -1,4 +1,16 @@
 {
+    "name": "mastroiannim/slim3",
+    "description": "Simple Slim Framework 3 in Sqlite.",
+    "license": "MIT",
+    "type": "project",
+    "keywords": ["slim-framework", "sqlite"],
+    "authors": [
+        {
+            "name": "Michele Mastroianni",
+            "email": "michele.mastroianni@itispaleocapa.it",
+            "homepage": "http://github.com/mastroiannim"
+        }
+    ],
     "config": {
         "disable-tls": true,
 	"secure-http": false
