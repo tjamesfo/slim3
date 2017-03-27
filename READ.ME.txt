@@ -1,6 +1,6 @@
 SCARICARE PHP http://windows.php.net/downloads/releases/php-5.6.30-nts-Win32-VC11-x86.zip
 SCOMPATTARE IN C:\USER\MASTROIANNIM\PHP (oppure dove vi pare)
-COPIARE php.ini-development IN php.ini  (oppure rinomimalo)
+COPIARE php.ini-development IN php.ini  (oppure rinominalo)
 DECOMMENTARE NEL NUOVO FILE php.ini LE SEGUENTI:
 extension_dir = "ext"
 extension=php_openssl.dll
