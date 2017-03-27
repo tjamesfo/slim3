@@ -1,0 +1,44 @@
+SCARICARE PHP http://windows.php.net/downloads/releases/php-5.6.30-nts-Win32-VC11-x86.zip
+SCOMPATTARE IN C:\USER\MASTROIANNIM\PHP (oppure dove vi pare)
+COPIARE php.ini-development IN php.ini  (oppure rinomimalo)
+DECOMMENTARE NEL NUOVO FILE php.ini LE SEGUENTI:
+extension_dir = "ext"
+extension=php_openssl.dll
+AGGIUNGERE LA CARTELLA php AL PATH
+SET PATH=%PATH%;C:\USER\MASTROIANNIM\PHP
+
+CREARE UNA CARTELLA PER UN NUOVO PROGETTO (ad esempio slim)
+NELLA CARTELLA DEL PROGETTO CREARE IL FILE composer.json CON IL SEGUENTE CONTENUTO:
+{
+    "config": {
+        "disable-tls": true,
+	"secure-http": false
+    },
+    "require": {
+        "slim/slim": "^3.0"
+    }
+}
+
+NELLA CARTELLA DEL PROGETTO SCARICARE https://getcomposer.org/composer.phar
+NELLA CARTELLA DEL PROGETTO ESEGUIRE IL COMANDO: php composer.phar install
+
+CREARE NELLA CARTELLA UN FILE index.php CON IL SEGUENTE CONTENUTO:
+<?php
+use \Psr\Http\Message\ServerRequestInterface as Request;
+use \Psr\Http\Message\ResponseInterface as Response;
+
+require 'vendor/autoload.php';
+
+$app = new \Slim\App;
+$app->get('/hello/{name}', function (Request $request, Response $response) {
+    $name = $request->getAttribute('name');
+    $response->getBody()->write("Hello, $name");
+
+    return $response;
+});
+$app->run();
+
+AVVIARE IL WEB SERVER DI PHP 
+php -S localhost:8888
+
+VERIFICA IL TUTTO ALL'INDIRIZZO http://localhost:8888/hello/XYZ
